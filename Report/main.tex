@@ -236,7 +236,7 @@ The model's behavior varies depending on whether it is in training or evaluation
     \item During training, the model expects input tensors and targets, which are a list of dictionaries. The targets include the ground-truth boxes in [x1, y1, x2, y2] format (where x1 and y1 are the top-left coordinates, and x2 and y2 are the bottom-right coordinates), along with the corresponding class labels. The model provides a dictionary of tensors as output during training, containing the classification and regression losses for both the RPN (Region Proposal Network) and the R-CNN (Region-based Convolutional Neural Network).
     \item During inference or evaluation, the model only requires input tensors and returns post-processed predictions as a list of dictionaries. Each dictionary in the list corresponds to an input image and contains the following fields:
     \begin{itemize}
-        \item \textbf{boxes}: The predicted bounding boxes in [x1, y1, x2, y2] format, representing the coordinates of the predicted boxes. The values satisfy the conditions 0 <= x1 < x2 <= W and 0 <= y1 < y2 <= H, where W and H are the width and height of the image.
+        \item \textbf{boxes}: The predicted bounding boxes in [x1, y1, x2, y2] format, representing the coordinates of the predicted boxes. The values satisfy the conditions \[0 \le x1 < x2 \le W \land 0 \le y1 < y2 \le H\], where W and H are the width and height of the image.
         \item \textbf{labels}: The predicted class labels for each detection, indicating the predicted object class.
         \item \textbf{scores}: The scores or confidence levels associated with each detection, representing the model's confidence in its predictions. The higher the score, the more confident the model is about the detection.
 
