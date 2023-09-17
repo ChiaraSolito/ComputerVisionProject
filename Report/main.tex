@@ -117,7 +117,7 @@ The goal of object detection is to not only recognize the presence of objects bu
 Traditional approaches to object detection relied on handcrafted features and classifiers, but recent advancements in deep learning have revolutionized the field. Deep learning-based object detection methods, such as the popular Faster R-CNN, SSD, and YOLO, leverage convolutional neural networks (CNNs) to extract hierarchical representations from input images and predict object classes and locations.
 
 \subsection{Motivation and Rationale}
-During the project conceptualization phase, we opted to concentrate on conducting a performance analysis between two influential Object Detection algorithms, namely YOLO (specifically version v5) and Faster RCNN (with Backbone Resnet 50v2). \textbf{This evaluation will be carried out on a novel and less-explored dataset.}\\
+During the project conceptualization phase, we opted to concentrate on conducting a performance analysis between two influential Object Detection algorithms, namely YOLO (specifically version v5) and Faster RCNN (with Backbone Resnet 50). \textbf{This evaluation will be carried out on a novel and less-explored dataset.}\\
 Over the past ten years, there has been remarkable advancement in object detection using deep learning techniques.\cite{kohleretal}
 Nevertheless, these approaches often rely on extensive training data, making it challenging to employ them in real-world situations where unfamiliar objects are involved, not included in commonly used object detection datasets.\\ The process of annotating a substantial number of images for object detection is both expensive and laborious. In certain instances, such as medical applications, obtaining abundant images may even be unfeasible, we will try to understand the limitations of the two models on a small dataset, experimenting with both pre-trained and non pre-trained networks.
 
@@ -372,7 +372,7 @@ The results of the Experiment with pre-trained weights, on the Validation Set, c
     Images & 26 \\
     Instances & 32\\
     Precision & 1 \\  
-    R & 0.992 \\
+    Recall & 0.992 \\
     mAP50 & 0.995\\
     mAP50-95 & 0.648\\
     \end{tabular}
@@ -448,7 +448,7 @@ The metrics used are indeed the same as before, the results for the experiment c
     Images & 26 \\
     Instances & 32\\
     Precision & 0.000801 \\  
-    R & 0.0625 \\
+    Recall & 0.0625 \\
     mAP50 & 0.000504\\
     mAP50-95 & 9.62e-05\\
     \end{tabular}
